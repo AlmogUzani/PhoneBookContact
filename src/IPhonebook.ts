@@ -11,6 +11,3 @@ interface IPhonebook extends Iterable<Contact | undefined> {
 }
 
 export default IPhonebook
-//export type Iphonebook = [IPhonebook]
-
-
