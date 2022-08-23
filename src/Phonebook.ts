@@ -1,3 +1,4 @@
+import {Iphonebook} from "./IPhonebook";
 import IPhonebook from "./IPhonebook";
 import Contact from "./Contact";
 
@@ -40,10 +41,14 @@ class Phonebook implements IPhonebook {
         if(myContact) return this.allContacts.splice(counter, counter+1)[0]
         return undefined
     }
-    /* [Symbol.iterator]() {
-        return this
-    } */
+    [Symbol.iterator]() {
+        return this;
+    }
+    getAllContact():Contact[]|undefined {
+        return this.allContacts
+    }
 }
+
 function createPhonebook():IPhonebook {
     return new Phonebook()
 }

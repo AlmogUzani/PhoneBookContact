@@ -41,6 +41,12 @@ var Phonebook = /** @class */ (function () {
             return this.allContacts.splice(counter, counter + 1)[0];
         return undefined;
     };
+    Phonebook.prototype[Symbol.iterator] = function () {
+        return this;
+    };
+    Phonebook.prototype.getAllContact = function () {
+        return this.allContacts;
+    };
     return Phonebook;
 }());
 function createPhonebook() {
