@@ -19,7 +19,7 @@ class Phonebook implements IPhonebook {
     }
     addPhone(id:number, phone:string):void { //add new phone to existing contact
         const contact = this.allContacts.find(contact => contact.id === id)
-        contact ? contact.phones.push(phone)
+        contact ? contact.phones.push(phone) : console.log("No such contact")
     }
     get(id:number):Contact|undefined //return contacts by id
     get(name:string):Contact[]|undefined; //return contacts by name
