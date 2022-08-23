@@ -27,6 +27,17 @@ yellowPages.addPhone(contact[0].id, '04');
 console.log('size before remove: ', yellowPages.size);
 yellowPages.remove(contact[0].id);
 console.log('size after remove: ', yellowPages.size);
+const contactArray = [];
 for (const contact of yellowPages) { //contacts will be delivered one by one (not yet -> in alphabetical order)
-    console.log(contact);
+    //console.log(contact);
+    contactArray.push(contact);
 }
+contactArray.sort((a, b) => {
+    let first = a.name, second = b.name;
+    if (first < second)
+        return -1;
+    if (first > second)
+        return 1;
+    return 0;
+});
+console.log(contactArray);

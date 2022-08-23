@@ -2,10 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Phonebook {
     constructor() {
-        this.allContacts = [];
         this.index = 0;
         this.lastID = 0;
-        this.allContacts;
+        this.allContacts = [];
     }
     get size() {
         return this.allContacts.length;
