@@ -3,7 +3,7 @@ class Contact {
         public name:string,
         public address:string,
         public phones:string[],
-        public id:number = NaN
+        public id?:number
         ){}
   }
   export default Contact

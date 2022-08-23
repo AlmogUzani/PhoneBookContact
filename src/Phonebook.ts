@@ -21,11 +21,11 @@ class Phonebook implements IPhonebook {
         const contact = this.allContacts.find(contact => contact.id === id)
         contact ? contact.phones.push(phone) : console.log("No such contact")
     }
-    get(id:number):Contact|undefined //return contacts by id
-    get(name:string):Contact[]|undefined; //return contacts by name
+    get(id:number):Contact | undefined //return contacts by id
+    get(name:string):Contact[] | undefined; //return contacts by name
     get(arg:number | string):Contact | Contact[] | undefined { //return contacts by name/id
         if(typeof arg === 'number') return this.allContacts.find(contact => contact.id === arg)
-        return this.allContacts.find(contact => contact.name === arg)
+        return this.allContacts.filter(contact => contact.name === arg)
     }
     remove(id:number):Contact|undefined { //remove contact by id and returns it
         let counter = 0,

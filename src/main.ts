@@ -15,18 +15,17 @@ myInstanceOfPhonebook.add(new Contact('David', 'Tira, Bish 1', ['050-4643839']))
 myInstanceOfPhonebook.add(new Contact('Beni', 'Eilat, Yassur 29', ['050-43111000']))
 
 
-console.log('size before add:' + myInstanceOfPhonebook.size)
+console.log('size before add: ', myInstanceOfPhonebook.size)
 myInstanceOfPhonebook.add(new Contact('Almog', 'Tira, Bish 1', ['050-4643839']))
 myInstanceOfPhonebook.add(new Contact('Ben-El', 'Eilat, Yassur 29', ['050-43111000']))
-console.log('size after add:' + myInstanceOfPhonebook.size)
+console.log('size after add: ', myInstanceOfPhonebook.size)
 
 myInstanceOfPhonebook.addPhone(2,'04')
-//console.log(my)
 
 const contact = myInstanceOfPhonebook.get('Asaf')
-if(contact) myInstanceOfPhonebook.addPhone(contact[0].id, '04')
 
+myInstanceOfPhonebook.addPhone(contact![0].id!, '04')
 
-console.log('size before remove:' + myInstanceOfPhonebook.size)
-if(contact) myInstanceOfPhonebook.remove(contact[0].id)
-console.log('size after remove:' + myInstanceOfPhonebook.size)
+console.log('size before remove: ', myInstanceOfPhonebook.size)
+myInstanceOfPhonebook.remove(contact![0].id!)
+console.log('size after remove: ', myInstanceOfPhonebook.size)
