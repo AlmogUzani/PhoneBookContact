@@ -38,9 +38,13 @@ class Phonebook implements IPhonebook {
             counter++
         }
         if(myContact) return this.allContacts.splice(counter, counter+1)[0]
-        else return undefined
+        return undefined
     }
     /* [Symbol.iterator]() {
         return this
     } */
 }
+function createPhonebook():IPhonebook {
+    return new Phonebook()
+}
+export default createPhonebook
