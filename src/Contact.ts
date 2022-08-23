@@ -1,7 +1,9 @@
 class Contact {
-    constructor(public id:number,
+    constructor(
+        public id:number,
         public name:string,
         public address:string,
-        public phones:string[]){}
+        public phones:string[]
+        ){}
   }
   export default Contact

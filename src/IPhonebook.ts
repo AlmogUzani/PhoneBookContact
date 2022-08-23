@@ -1,4 +1,4 @@
-import Contant from "./Contact"
+import Contact from "./Contact"
 
 interface IPhonebook {
     size:number //- gets the amount of contacts
