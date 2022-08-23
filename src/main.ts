@@ -31,13 +31,6 @@ yellowPages.remove(contact![0].id!)
 console.log('size after remove: ', yellowPages.size)
 
 
-const yelloPages = yellowPages.getAllContact()
-yelloPages?.sort((a, b) => { //contacts will be sorted in alphabetical order
-    let first = a.name, second = b.name
-    if(first<second) return -1
-    if(first>second) return 1
-    return 0
-})
- for(const contact of yelloPages!){ //contacts will be delivered in alphabetical order
+ for(const contact of yellowPages!){ //contacts will be delivered in alphabetical order
     console.log(contact);
 }

@@ -1,13 +1,14 @@
-import {Iphonebook} from "./IPhonebook";
 import IPhonebook from "./IPhonebook";
 import Contact from "./Contact";
 
 class Phonebook implements IPhonebook {
-    public allContacts:Contact[]
+    public allContacts:Contact[] = []
+    public index:number
     public lastID:number
     constructor(){
-        this.allContacts = []
+        this.index = 0
         this.lastID = 0
+        this.allContacts
     }
     get size():number {
         return this.allContacts.length
@@ -41,11 +42,20 @@ class Phonebook implements IPhonebook {
         if(myContact) return this.allContacts.splice(counter, counter+1)[0]
         return undefined
     }
-    [Symbol.iterator]() {
-        return this;
+    next() {
+        if (this.index === this.allContacts.length) {
+          return { 
+           done: true,
+           value: undefined
+          };
+        }
+        return { 
+          done: false, 
+          value: this.allContacts[this.index++]
+        };
     }
-    getAllContact():Contact[]|undefined {
-        return this.allContacts
+    [Symbol.iterator]():Iterator<Contact | undefined> {
+        return this
     }
 }
 
